@@ -7,4 +7,11 @@
 
 {% block body %}
 
+{% for bar in barber %}
+ <tr>
+    <td>{{ bar.description }}</td>
+    <td>{{ bar.name }}</td>
+    <td></td>
+ </tr>
+ {% endfor %}
 {% endblock %}
