@@ -4,7 +4,7 @@ from pickle import TRUE
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-import pymysql
+
 from pprint import pprint
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/barber_shop'
@@ -23,12 +23,10 @@ class barbers(db.Model):
         return f'<barbers:{self.name}>'
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
 
     barber = barbers.query.all()
-    pprint(globals(barber))
-
     return render_template('index.html', barber=barber)
 
 
