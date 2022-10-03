@@ -13,10 +13,10 @@ db = SQLAlchemy(app)
 
 class barbers(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String())
+    name = db.Column(db.String(255))
     description = db.Column(db.String())
-    image = db.Column(db.String())
-    status = db.Column(db.String())
+    image = db.Column(db.String(255))
+    status = db.Column(db.String(255))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
