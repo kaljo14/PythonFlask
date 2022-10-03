@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>Template</h1>
+  <title>Template</title> 
 {% endblock %}
 
 
@@ -15,6 +15,7 @@
       <h2 class="text-3xl font-semibold text-gray-800">{{ bar.name }}</h2>
       <p class="my-3 leading-normal text-gray-700">{{ bar.id }}</p>
       <p class="my-3 leading-normal text-gray-700">{{ bar.description }}</p>
+      <p class="my-3 leading-normal text-gray-700">{{ bar.status }}</p>
    </div>
    <div class="flex items-center justify-between p-4">
       <a href="#" class="px-4 py-2 bg-red-600 text-green-50 hover:bg-red-300">Book
